@@ -17,7 +17,6 @@ export default function Home() {
     <div className="absolute inset-0 bg-black/40" />
   </div>
 
-
   {/* Texte au-dessus de la vidéo */}
   <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
     <h1 className="text-4xl md:text-4xl font-bold bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">
@@ -28,7 +27,7 @@ export default function Home() {
     </p>
   </div>
 </section>
-      <Carousel />
+      <Carousel />  
     </main>
   )
 }
