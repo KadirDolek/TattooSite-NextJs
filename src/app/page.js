@@ -1,11 +1,12 @@
 import Carousel from '../app/components/Carousel';
 import Footer from './components/Footer';
+import CircularGallery from './components/CircularGallery'
 
 
 export default function Home() {
   return (
     <main className="flex justify-center flex-col">
-     <section className="relative w-full h-[550px] overflow-hidden">
+     <section className="relative w-full h-[100vh] overflow-hidden">
       <div className="fixed inset-0 -z-10 pointer-events-none scale-[1.4] -translate-y-16">
         <iframe
           src="https://www.youtube.com/embed/Ck8sslwkKRk?autoplay=1&mute=1&controls=0&loop=1&playlist=Ck8sslwkKRk&start=13"
@@ -26,6 +27,10 @@ export default function Home() {
       </div>
      </section>
       <Carousel />  
+      <div style={{ height: '600px', position: 'relative' }}>
+        <h2 className='flex justify-center text-2xl bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent'>Mes dernières créations :</h2> 
+        <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
+      </div>
       <Footer />
     </main>
      

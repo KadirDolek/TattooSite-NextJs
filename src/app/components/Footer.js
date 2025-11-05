@@ -58,7 +58,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <Link href="/">
-              <p className="font-bold text-xl text-white">BaabyAlish@</p>
+              <p className="font-bold text-xl text-white">@BaabyAlish</p>
             </Link>
             <p className="text-sm text-gray-400 max-w-sm">
               Portfolio & créations. Disponible pour commandes et collaborations.
