@@ -6,7 +6,9 @@ export default function Home() {
     <main className="flex justify-center flex-col">
      <section className="relative w-full h-[550px] overflow-hidden">
   {/* Vidéo YouTube en arrière-plan */}
-  <div className="absolute inset-0 z-0 pointer-events-none scale-[1.4] -translate-y-16">
+  
+  {/* Vidéo YouTube en arrière-plan (fixe) */}
+  <div className="fixed inset-0 -z-10 pointer-events-none scale-[1.4] -translate-y-16">
     <iframe
       src="https://www.youtube.com/embed/Ck8sslwkKRk?autoplay=1&mute=1&controls=0&loop=1&playlist=Ck8sslwkKRk&start=13"
       title="YouTube video player"
@@ -14,7 +16,7 @@ export default function Home() {
       allowFullScreen
       className="w-full h-full object-cover"
     />
-    <div className="absolute inset-0 bg-black/40" />
+    <div className="absolute inset-0 bg-black/80" />
   </div>
 
   {/* Texte au-dessus de la vidéo */}
