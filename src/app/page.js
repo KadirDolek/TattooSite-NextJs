@@ -1,4 +1,5 @@
 import Carousel from '../app/components/Carousel';
+import Footer from './components/Footer';
 
 
 export default function Home() {
@@ -25,6 +26,8 @@ export default function Home() {
       </div>
      </section>
       <Carousel />  
+      <Footer />
     </main>
+     
   )
 }

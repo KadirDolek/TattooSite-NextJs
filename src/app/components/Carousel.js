@@ -20,7 +20,7 @@ export default function CarouselSection() {
   }, []);
 
   return (
-    <section className="px-4 py-8">
+    <section className="px-4 py-8 mb-24">
       <div className="relative z-10 flex flex-col md:flex-row w-full max-w-5xl mx-auto mt-6 rounded-xl transition-transform duration-300 hover:scale-102 
     shadow-[0_0_15px_5px_rgba(255,100,180,0.6),inset_0_0_12px_1px_rgba(255,255,255,0.3)]
     before:absolute before:inset-0 before:bg-pink-300/20 before:rounded-xl before:backdrop-blur-sm before:-z-10
@@ -29,10 +29,10 @@ export default function CarouselSection() {
   {/* Description */}
   <div className="flex-1 bg-transparent p-4 md:p-6 rounded-t-xl md:rounded-l-xl md:rounded-tr-none relative z-10">
     <h2 className="text-2xl md:text-3xl font-bold mb-4 text-pink-600 text-center bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">
-      Titre de la section
+      Ptit titre tavu
     </h2>
     <p className="bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent text-base md:text-lg text-center mb-6">
-      Ceci est un espace pour la description. Vous pouvez y ajouter du texte explicatif, des détails ou tout autre contenu pertinent.
+      blabla
     </p>
   </div>
 
