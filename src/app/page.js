@@ -15,7 +15,7 @@ export default function Home() {
           allowFullScreen
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/80" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
         <h1 className="text-4xl md:text-4xl font-bold bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">
@@ -27,9 +27,9 @@ export default function Home() {
       </div>
      </section>
       <Carousel />  
-      <div style={{ height: '600px', position: 'relative' }}>
-        <h2 className='flex justify-center text-2xl bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent'>Mes dernières créations :</h2> 
-        <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
+      <div className='mb-24' style={{ height: '600px', position: 'relative' }}>
+        <h2 className='flex justify-center text-3xl bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent mt-12'>Mes dernières créations :</h2> 
+        <CircularGallery  bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
       </div>
       <Footer />
     </main>

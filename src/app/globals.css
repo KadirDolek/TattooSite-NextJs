@@ -19,3 +19,7 @@ body {
   cursor: var(--svg-cursor);
 
 }
+html {
+  scroll-behavior: smooth;
+  
+}

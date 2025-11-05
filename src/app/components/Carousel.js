@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 const images = [
-  '/leaf.jpg',
+  '/doggo.jpg',
   '/reed.jpg',
   '/leaf.jpg',
 ];
@@ -20,7 +20,7 @@ export default function CarouselSection() {
   }, []);
 
   return (
-    <section className="px-4 py-8">
+    <section id='about' className="px-4 py-8">
       <div className="relative z-10 flex flex-col md:flex-row w-full max-w-5xl mx-auto mt-6 rounded-xl transition-transform duration-300 hover:scale-102 shadow-[0_0_0px_3px_rgba(255,0,150,0.5)]">
         {/* Description */}
         <div className="flex-1 bg-transparent p-4 md:p-6 rounded-t-xl md:rounded-l-xl md:rounded-tr-none">
