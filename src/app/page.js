@@ -30,31 +30,32 @@ export default function Home() {
 
       {/* 2x2 grid de 4 divs (vide) */}
       <section className="max-w-6xl mx-auto px-4 py-8 w-full">
-  <div className="grid grid-cols-3 grid-rows-2 gap-4 h-[600px]">
-    {/* Petite */}
-    <div className="bg-gradient-to-br from-red-200 to-pink-400 rounded-lg h-full shadow-xl" aria-hidden="true">
-      <p className="p-4">Bonjour</p>
-    </div>
+        <div className="grid grid-cols-3 grid-rows-2 gap-4 h-[600px]">
+          {/* Petite */}
+          <div className="bg-gradient-to-br from-red-200 to-pink-400 rounded-lg h-full shadow-xl hover:scale-102" aria-hidden="true">
+            <p className="p-4">Bonjour</p>
+            
+          </div>
 
-    {/* Moyenne */}
-    <div className="bg-gradient-to-br from-red-200 to-pink-400 rounded-lg h-full" aria-hidden="true" />
+          {/* Moyenne */}
+          <div className="bg-gradient-to-br from-red-200 to-pink-400 rounded-lg h-full hover:scale-102" aria-hidden="true" />
 
-    {/* Grande */}
-    <div className="bg-gradient-to-br from-red-200 to-pink-400 rounded-lg h-full col-span-1 row-span-2" aria-hidden="true" />
+          {/* Grande */}
+          <div className="bg-gradient-to-br from-red-200 to-pink-400 rounded-lg h-full col-span-1 row-span-2 hover:scale-102" aria-hidden="true" />
 
-    {/* Moyenne */}
-    <div className="bg-gradient-to-br from-red-200 to-pink-400 rounded-lg h-full" aria-hidden="true" />
+          {/* Moyenne */}
+          <div className="bg-gradient-to-br from-red-200 to-pink-400 rounded-lg h-full hover:scale-102" aria-hidden="true" />
 
-    {/* Petite */}
-    <div className="bg-gradient-to-br from-red-200 to-pink-400 rounded-lg h-full" aria-hidden="true" />
+          {/* Petite */}
+          <div className="bg-gradient-to-br from-red-200 to-pink-400 rounded-lg h-full hover:scale-102" aria-hidden="true" />
 
-  </div>
-</section>
+        </div>
+      </section>
       
-      <div className='mb-24' style={{ height: '600px', position: 'relative' }}>
+    <div className='mb-24' style={{ height: '600px', position: 'relative' }}>
         <h2 className='flex justify-center text-3xl bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent mt-12'>Mes dernières créations :</h2> 
         <CircularGallery  bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
-      </div>
+    </div>
 
       <section className="max-w-6xl mx-auto px-4 py-8 w-full my-42">
   <div className="rounded-lg overflow-hidden bg-pink-200 md:h-auto flex flex-col items-stretch justify-center p-6 gap-6">
@@ -131,7 +132,7 @@ export default function Home() {
       </details>
     </div>
   </div>
-</section>
+      </section>
       <Footer />
     </main>
      
