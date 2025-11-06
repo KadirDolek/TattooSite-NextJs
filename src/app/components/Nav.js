@@ -4,11 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
-/**
- * LinkP
- * - href peut être "/#about", "#about" ou "/other"
- * - onClick permet de fermer un menu parent
- */
+
 function LinkP({ href, children, onClick }) {
   const router = useRouter();
 
@@ -102,7 +98,7 @@ export default function Nav() {
             onClick={() => setOpen((s) => !s)}
             aria-expanded={open}
             aria-controls="home-submenu"
-            className="flex items-center gap-2 bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold hover:scale-105 transition-transform duration-200"
+            className="flex items-center gap-2 bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold hover:scale-105 cursor-pointer transition-transform duration-200"
           >
             Home <span className="text-pink-100 text-sm">▾</span>
           </button>

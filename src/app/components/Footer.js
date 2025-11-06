@@ -88,7 +88,7 @@ export default function Footer() {
             {/* Brand */}
             <div className="flex flex-col gap-4">
               <Link href="/">
-                <p className="font-bold text-xl text-white">@BaabyAlish</p>
+                <p className="font-bold text-xl text-pink-200">@BaabyAlish</p>
               </Link>
               <p className="text-sm text-gray-400 max-w-sm">
                 Portfolio & créations. Disponible pour commandes et collaborations.
@@ -115,7 +115,7 @@ export default function Footer() {
             {/* Links */}
             <nav aria-label="footer navigation"  className="flex flex-col md:flex-row md:justify-center gap-6">
               <div>
-                <h3 className="text-sm font-semibold text-gray-300">Navigation</h3>
+                <h3 className="text-sm font-semibold text-pink-200">Navigation</h3>
                 <ul className="mt-3 space-y-2">
                   <li><Link href="/"><p className="text-sm text-gray-400 hover:text-white">Home</p></Link></li>
                   <li><Link href="/tattoo"><p className="text-sm text-gray-400 hover:text-white">Portfolio tattoo</p></Link></li>
@@ -125,7 +125,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <h3 className="text-sm font-semibold text-gray-300">Aide</h3>
+                <h3 className="text-sm font-semibold text-pink-200">Aide</h3>
                 <ul className="mt-3 space-y-2">
                   <li>
                     <button
@@ -144,18 +144,18 @@ export default function Footer() {
 
             {/* petit rappel/call to action */}
             <div className="flex flex-col gap-3">
-              <h3 className="text-sm font-semibold text-gray-300">Contact</h3>
+              <h3 className="text-sm font-semibold text-pink-200">Contact</h3>
               <p className="text-sm text-gray-400">Envoie-moi un message — il arrivera directement dans ma boîte.</p>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="mt-2 inline-block px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600"
+                className="mt-2 inline-block px-4 py-2 bg-gradient-to-b from-pink-400 to-pink-900 text-white rounded hover:bg-pink-600 cursor-pointer text-sm text-center"
               >
                 Ouvrir le formulaire
               </button>
             </div>
           </div>
 
-          <div className="mt-8 border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-center">
+          <div className="mt-8  pt-6 flex flex-col md:flex-row items-center justify-center">
             <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} BaabyAlish. Tous droits réservés. Réalisé par Kadir Dölek</p>
           </div>
         </div>
@@ -176,7 +176,7 @@ export default function Footer() {
           />
 
           {/* modal panel */}
-          <div className="relative w-full max-w-lg mx-4 bg-gradient-to-b from-pink-400 to-pink-900 border border-gray-800 rounded-lg shadow-xl transform transition-all scale-100">
+          <div className="relative w-full max-w-lg mx-4 bg-gradient-to-b from-pink-400 to-pink-900  rounded-lg shadow-xl transform transition-all scale-100">
             <div className="px-6 py-5">
               <div className="flex items-start justify-between">
                 <h3 className="text-lg font-semibold text-white">Contact</h3>
