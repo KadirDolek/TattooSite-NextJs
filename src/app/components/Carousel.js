@@ -24,7 +24,7 @@ export default function CarouselSection() {
       <div className="relative z-10 flex flex-col md:flex-row w-full max-w-5xl mx-auto mt-6 rounded-xl transition-transform duration-300 hover:scale-102 shadow-[0_0_0px_3px_rgba(255,0,150,0.5)]">
         {/* Description */}
         <div className="flex-1 bg-transparent p-4 md:p-6 rounded-t-xl md:rounded-l-xl md:rounded-tr-none">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-pink-600 text-center bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">Titre de la section</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-pink-600 text-center bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">A propos de moi</h2>
           <p className="bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent text-base md:text-lg text-center mb-6 ">
             Ceci est un espace pour la description. Vous pouvez y ajouter du texte explicatif, des détails ou tout autre contenu pertinent.
           </p>
