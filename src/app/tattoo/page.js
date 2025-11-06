@@ -1,5 +1,5 @@
 import Footer from "../components/Footer"
-
+import DomeGallery from "../components/DomeGalleryTa"
 
 export default function Tattoo () {
   return (
@@ -9,7 +9,7 @@ export default function Tattoo () {
           <h1 className="text-3xl font-semibold text-center mt-12">Portfolio tattoo</h1>
         </div>
           <div style={{ width: '100vw', height: '100vh' }}>
-           
+            <DomeGallery />
           </div>
       </section>
       <Footer />

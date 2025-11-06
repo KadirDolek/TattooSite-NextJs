@@ -4,41 +4,85 @@ import { useGesture } from '@use-gesture/react';
 
 const DEFAULT_IMAGES = [
   {
-    src: '/dessin1.jpg',
+    src: '/tatoo1.jpg',
     alt: 'Photo 1'
   },
   {
-    src: '/dessin2.jpg',
+    src: '/tatoo2.jpg',
     alt: 'Photo 2'
   },
   {
-    src: '/dessin3.jpg',
+    src: '/tatoo3.jpg',
     alt: 'Photo 3'
   },
   {
-    src: '/dessin4.jpg',
+    src: '/tatoo4.jpg',
     alt: 'Photo 4'
   },
   {
-    src: '/dessin5.jpg',
+    src: '/tatoo5.jpg',
     alt: 'Photo 5'
   },
   {
-    src: '/dessin6.jpg',
+    src: '/tatoo6.jpg',
     alt: 'Photo 6'
   },
   {
-    src: '/dessin7.jpg',
+    src: '/tatoo7.jpg',
     alt: 'Photo 7'
   },
   {
-    src: '/dessin8.jpg',
+    src: '/tatoo8.jpg',
     alt: 'Photo 8'
   },
   {
-    src: '/dessin9.jpg',
+    src: '/tatoo9.jpg',
     alt: 'Photo 9'
-  }
+  },
+  {
+    src: '/tatoo10.jpg',
+    alt: 'Photo 10'
+  },
+  {
+    src: '/tatoo11.jpg',
+    alt: 'Photo 11'
+  },
+  {
+    src: '/tatoo12.jpg',
+    alt: 'Photo 12'
+  },
+  {
+    src: '/tatoo13.jpg',
+    alt: 'Photo 13'
+  },
+  {
+    src: '/tatoo14.jpg',
+    alt: 'Photo 14'
+  },
+  {
+    src: '/tatoo15.jpg',
+    alt: 'Photo 15'
+  },
+  {
+    src: '/tatoo16.jpg',
+    alt: 'Photo 16'
+  },
+  {
+    src: '/tatoo17.jpg',
+    alt: 'Photo 17'
+  },
+  {
+    src: '/tatoo18.jpg',
+    alt: 'Photo 18'
+  },
+  {
+    src: '/tatoo19.jpg',
+    alt: 'Photo 19'
+  },
+  {
+    src: '/tatoo20.jpg',
+    alt: 'Photo 20'
+  },
 ];
 
 const DEFAULTS = {
