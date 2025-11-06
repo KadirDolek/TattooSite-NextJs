@@ -5,9 +5,9 @@ import ScrollStack, { ScrollStackItem } from '../components/ScrollStack';
 export default function Craft () {
   return (
     <main className="flex justify-center flex-col">
-      <section className="relative w-full h-[100vh] overflow-hidden">
+      <section className="relative w-full h-auto overflow-hidden">
               <div>
-                <h1 className="text-3xl font-semibold text-center mt-12">Craft & Brol</h1>
+                <h1 className="text-3xl font-semibold text-center mt-12 -mb-12 bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">Craft & Brol</h1>
               </div>
                 <div style={{ width: '100vw', height: '100vh' }}>
                   <ScrollStack>
@@ -21,6 +21,14 @@ export default function Craft () {
                     </ScrollStackItem>
                     <ScrollStackItem>
                       <h2>Card 3</h2>
+                      <p>This is the third card in the stack</p>
+                    </ScrollStackItem>
+                    <ScrollStackItem>
+                      <h2>Card 4</h2>
+                      <p>This is the third card in the stack</p>
+                    </ScrollStackItem>
+                    <ScrollStackItem>
+                      <h2>Card 5</h2>
                       <p>This is the third card in the stack</p>
                     </ScrollStackItem>
                   </ScrollStack>
