@@ -84,7 +84,7 @@ export default function Footer() {
     <>
       <footer id='contact' className="bg-transparent text-gray-200 border-t-3 border-pink-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center sm:text-left">
             {/* Brand */}
             <div className="flex flex-col gap-4">
               <Link href="/">
@@ -93,7 +93,7 @@ export default function Footer() {
               <p className="text-sm text-gray-400 max-w-sm">
                 Portfolio & créations. Disponible pour commandes et collaborations.
               </p>
-              <div className="flex space-x-3">
+              <div className="flex space-x-3 justify-center sm:justify-start">
                 <a href="https://instagram.com/tonprofil" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded-md bg-gray-800 hover:bg-gray-700">
                   <svg className="w-5 h-5 text-pink-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
@@ -113,7 +113,7 @@ export default function Footer() {
             </div>
 
             {/* Links */}
-            <nav aria-label="footer navigation"  className="flex flex-col md:flex-row md:justify-center gap-6">
+            <nav aria-label="footer navigation" className="flex flex-col md:flex-row md:justify-center gap-6 items-center sm:items-start">
               <div>
                 <h3 className="text-sm font-semibold text-pink-200">Navigation</h3>
                 <ul className="mt-3 space-y-2">
@@ -144,7 +144,7 @@ export default function Footer() {
             </nav>
 
             {/* petit rappel/call to action */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 items-center sm:items-start">
               <h3 className="text-sm font-semibold text-pink-200">Contact</h3>
               <p className="text-sm text-gray-400">Envoie-moi un message — il arrivera directement dans ma boîte.</p>
               <button
@@ -156,7 +156,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-8  pt-6 flex flex-col md:flex-row items-center justify-center">
+          <div className="mt-8 pt-6 flex flex-col md:flex-row items-center justify-center text-center">
             <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} BaabyAlish. Tous droits réservés. Réalisé par Kadir Dölek</p>
           </div>
         </div>

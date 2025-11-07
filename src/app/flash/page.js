@@ -43,7 +43,7 @@ export default function Flash() {
 
   return (
     <main className="flex justify-center flex-col bg-gradient-to-t from-dark via-pink-400 to-black min-h-screen">
-      <section className="relative w-full h-auto overflow-hidden px-4">
+      <section className="relative w-full h-auto overflow-hidden px-4 mb-12">
         <div>
           <h1 className="text-2xl md:text-3xl font-semibold text-center mt-12 mb-12 bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">
             Tous mes dessins réalisés 
