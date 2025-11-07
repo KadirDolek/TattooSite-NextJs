@@ -37,28 +37,28 @@ export default function Home() {
           {/* Petite */}
           <div className="bg-gradient-to-br from-red-00 to-pink-400 rounded-lg h-full shadow-xl hover:scale-102" aria-hidden="true">
              <Link href="/tattoo" className="">
-            <img src="./tatoo11.jpg" className="object-cover w-full h-full" alt="" />
+            <img src="./tatoo11.jpg" className="object-cover w-full rounded-lg h-full" alt="" />
             </Link>
           </div>
 
           {/* Moyenne */}
           <div className="bg-gradient-to-br from-red-00 to-pink-400 rounded-lg h-full hover:scale-102" aria-hidden="true" >
             <Link href="/flash" className="">
-            <img src="./dessin5.jpg" className="object-cover w-full h-full" alt="" />
+            <img src="./dessin5.jpg" className="object-cover w-full h-full rounded-lg" alt="" />
             </Link>
           </div>
 
           {/* Grande */}
           <div className="bg-gradient-to-br from-red-00 to-pink-400 rounded-lg h-full col-span-1 row-span-2 hover:scale-102" aria-hidden="true" >
               <Link href="/tattoo" className="">
-            <img src="./tatoo5.jpg" className="object-cover w-full h-full" alt="" />
+            <img src="./tatoo5.jpg" className="object-cover w-full rounded-lg h-full" alt="" />
            </Link>
           </div>
 
           {/* Moyenne */}
           <div className="bg-gradient-to-br from-red-00 to-pink-400 rounded-lg h-full hover:scale-102" aria-hidden="true" >
             <Link href="/flash" className="">
-            <img src="./dessin2.jpg" className="object-cover w-full h-full" alt="" />
+            <img src="./dessin2.jpg" className="object-cover w-full rounded-lg h-full" alt="" />
             </Link>
             </div>
             
@@ -66,7 +66,7 @@ export default function Home() {
           {/* Petite */}
           <div className="bg-gradient-to-br from-red-00 to-pink-400 rounded-lg h-full hover:scale-102" aria-hidden="true" >
             <Link href="/tattoo" className="">
-            <img src="./tatoo15.jpg" className="object-cover w-full h-full" alt="" />
+            <img src="./tatoo15.jpg" className="object-cover w-full rounded-lg h-full" alt="" />
             </Link>
           </div>
 
@@ -74,7 +74,7 @@ export default function Home() {
       </section>
       
 
-      <section className="max-w-6xl mx-auto px-4 py-8 w-full my-42">
+      <section className="max-w-6xl mx-auto px-4 py-8 w-full my-42 scale-90">
         <div className="rounded-lg overflow-hidden bg-gradient-to-br from-red-00 to-pink-400 md:h-auto flex flex-col items-stretch justify-center p-6 gap-6">
           <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">Questions souvent posées</h3>
           <div className="w-full">

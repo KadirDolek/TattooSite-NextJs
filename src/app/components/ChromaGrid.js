@@ -128,7 +128,7 @@ const ChromaGrid = ({ items, className = '', radius = 300, damping = 0.45, fadeO
           key={i}
           onMouseMove={handleCardMove}
           onClick={() => handleCardClick(c.url)}
-          className="group relative flex flex-col w-[300px] rounded-[20px] overflow-hidden border-2 border-transparent transition-colors duration-300 cursor-pointer"
+          className="group relative flex flex-col w-[300px] rounded-[20px] my-6 overflow-hidden border-2 border-transparent transition-colors duration-300 cursor-pointer"
           style={{
             '--card-border': c.borderColor || 'transparent',
             background: c.gradient,

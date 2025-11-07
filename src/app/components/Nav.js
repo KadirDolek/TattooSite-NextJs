@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [portfolioOpen, setPortfolioOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const router = useRouter();
 
   const navigateToHash = (fullHref) => {
@@ -58,6 +59,7 @@ export default function Nav() {
     e?.preventDefault();
     setOpen(false);
     setPortfolioOpen(false);
+    setMobileOpen(false);
     // gérer hrefs relatifs comme "#contact"
     const normalized = href.startsWith('#') ? `${window.location.pathname}${href}` : href;
     navigateToHash(normalized);
@@ -66,7 +68,7 @@ export default function Nav() {
   return (
     <nav className="relative bg-gradient-to-l from-dark via-pink-400 to-dark sticky top-0 z-50 shadow-lg shadow-pink-500/20">
       {/* Mini logo positioned absolutely to the left */}
-      <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
+      <div className="absolute left-4 mt-6 top-1/2 transform -translate-y-1/2">
         <Link href="/" aria-label="Accueil" className="flex items-center">
           <svg
             width="36"
@@ -84,8 +86,18 @@ export default function Nav() {
         </Link>
       </div>
 
-      {/* Centered nav content */}
-      <div className="max-w-6xl mx-auto flex items-center justify-center">
+      {/* Hamburger for mobile (visible only on small screens) */}
+      <button
+        type="button"
+        aria-label={mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+        onClick={() => { setMobileOpen((s) => !s); setOpen(false); setPortfolioOpen(false); }}
+        className="md:hidden absolute right-4 mt-6 top-1/2 transform -translate-y-1/2 z-50 p-2 rounded-md text-white/90 bg-black/20 hover:bg-black/30"
+      >
+        <span aria-hidden="true" className="text-xl">{mobileOpen ? '✕' : '☰'}</span>
+      </button>
+
+      {/* Centered nav content (desktop only) */}
+      <div className="max-w-6xl mx-auto flex items-center justify-center hidden md:flex">
         <ul className="flex gap-6 items-center">
           <li className="relative">
             <button
@@ -106,7 +118,6 @@ export default function Nav() {
             >
               <ul className="flex flex-col">
                 <li>
-                  {/* ancres gérées inline ; aucun LinkP */}
                   <p
                     role="link"
                     tabIndex={0}
@@ -186,6 +197,64 @@ export default function Nav() {
           </li>
         </ul>
       </div>
+
+      {/* Mobile menu (only on small screens) */}
+      {mobileOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-gradient-to-b from-pink-500  to-dark z-40 shadow-lg ">
+          <div className="max-w-3xl mx-auto px-4 py-4">
+            <ul className="flex flex-col gap-1">
+              <li>
+                <button
+                  type="button"
+                  onClick={() => onAnchorClick(null, '/#about')}
+                  className="w-full text-left px-3 py-2 rounded-md text-white/90 hover:bg-white/5"
+                >
+                  À propos de moi
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => onAnchorClick(null, '/#contact')}
+                  className="w-full text-left px-3 py-2 rounded-md text-white/90 hover:bg-white/5"
+                >
+                  Contact
+                </button>
+              </li>
+
+              <li>
+                <div className="border-t border-white/10 my-2" />
+              </li>
+
+              <li>
+                <Link href="/tattoo" onClick={() => setMobileOpen(false)}>
+                  <p className="px-3 py-2 rounded-md text-white/90 hover:bg-white/5">Tattoo réalisé</p>
+                </Link>
+              </li>
+              <li>
+                <Link href="/dessin" onClick={() => setMobileOpen(false)}>
+                  <p className="px-3 py-2 rounded-md text-white/90 hover:bg-white/5">Flash dispo</p>
+                </Link>
+              </li>
+
+              <li>
+                <div className="border-t border-white/10 my-2" />
+              </li>
+
+              <li>
+                <Link href="/craft" onClick={() => setMobileOpen(false)}>
+                  <p className="px-3 py-2 rounded-md text-white/90 hover:bg-white/5">Craft & Brol</p>
+                </Link>
+              </li>
+              <li>
+                <Link href="/flash" onClick={() => setMobileOpen(false)}>
+                  <p className="px-3 py-2 rounded-md text-white/90 hover:bg-white/5">Mes dessins</p>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
