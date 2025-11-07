@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 const images = [
-  '/doggo.jpg',
-  '/reed.jpg',
-  '/leaf.jpg',
+  '/dessin1.jpg',
+  '/dessin2.jpg',
+  '/dessin3.jpg',
 ];
 
 export default function CarouselSection() {

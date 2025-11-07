@@ -1,18 +1,24 @@
-
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cinzel } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/Nav";
+import { Playfair_Display } from "next/font/google";
 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair-display",
   subsets: ["latin"],
+  weight: ["400","500","600","700","800","900"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
+
 
 export const metadata = {
   title: "BaabyAlish Portfolio",
@@ -25,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${cinzel.variable} ${playfair.variable} antialiased`}
       >
           <Nav />
         {children}
