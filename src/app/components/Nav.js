@@ -154,14 +154,14 @@ export default function Nav() {
                 <li>
                   <Link href="/tattoo" onClick={() => setPortfolioOpen(false)}>
                     <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-50 cursor-pointer">
-                      <span className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold">Tattoo</span>
+                      <span className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold">Tattoo réalisé</span>
                     </p>
                   </Link>
                 </li>
                 <li>
                   <Link href="/dessin" onClick={() => setPortfolioOpen(false)}>
                     <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-50 cursor-pointer">
-                      <span className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold">Dessins</span>
+                      <span className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold">Flash dispo</span>
                     </p>
                   </Link>
                 </li>

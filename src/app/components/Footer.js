@@ -119,9 +119,9 @@ export default function Footer() {
                 <ul className="mt-3 space-y-2">
                   <li><Link href="/"><p className="text-sm text-gray-400 hover:text-white">Home</p></Link></li>
                   <li><Link href="/tattoo"><p className="text-sm text-gray-400 hover:text-white">Portfolio tattoo</p></Link></li>
-                  <li><Link href="/dessin"><p className="text-sm text-gray-400 hover:text-white">Portfolio dessins</p></Link></li>
+                  <li><Link href="/flash"><p className="text-sm text-gray-400 hover:text-white">Portfolio dessins</p></Link></li>
                   <li><Link href="/craft"><p className="text-sm text-gray-400 hover:text-white">Craft & Brol</p></Link></li>
-                  <li><Link href="/flash"><p className="text-sm text-gray-400 hover:text-white">Mes flashs</p></Link></li>
+                  <li><Link href="/dessin"><p className="text-sm text-gray-400 hover:text-white">Mes flashs</p></Link></li>
                 </ul>
               </div>
 
