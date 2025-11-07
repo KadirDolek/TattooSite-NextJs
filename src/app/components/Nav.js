@@ -68,7 +68,7 @@ export default function Nav() {
   return (
     <nav className="relative bg-gradient-to-l from-dark via-pink-400 to-dark sticky top-0 z-50 shadow-lg shadow-pink-500/20">
       {/* Mini logo positioned absolutely to the left */}
-      <div className="absolute left-4 mt-6 top-1/2 transform -translate-y-1/2">
+      <div className="absolute left-4 top-7 transform -translate-y-1/2">
         <Link href="/" aria-label="Accueil" className="flex items-center">
           <svg
             width="36"
