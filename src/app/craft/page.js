@@ -53,8 +53,8 @@ export default function Craft () {
   ];
 
   return (
-    <main className="flex justify-center flex-col">
-      <section className="relative w-full h-[1000px] overflow-hidden">
+    <main className="flex justify-center flex-col bg-gradient-to-t from-dark via-pink-400 to-black ">
+      <section className="relative w-full h-[1000px] overflow-hidden ">
               <div>
                 <h1 className="text-3xl font-semibold text-center mt-12 mb-12 bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">Craft & Brol</h1>
               </div>

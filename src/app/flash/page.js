@@ -42,15 +42,16 @@ export default function Flash() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <main className="flex justify-center flex-col">
+    <main className="flex justify-center flex-col bg-gradient-to-t from-dark via-pink-400 to-black">
       <section className="relative w-full h-auto overflow-hidden">
         <div>
           <h1 className="text-3xl font-semibold text-center mt-12 mb-12 bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">
             Tous mes dessins réalisés 
           </h1>
-        </div>
-
-        <section className="max-w-6xl mx-auto px-4 py-8 w-full">
+          {/* <img className='absolute position translate-y-[-240px] -z-1' src="light2.png" alt="" /> */}
+        </div> 
+        
+        <section className="max-w-6xl mx-auto px-4 py-8 w-full z-index-10">
           <div className="grid grid-cols-5 grid-rows-5 gap-4 h-[800px]">
             {spans.map((span, i) => (
               <div

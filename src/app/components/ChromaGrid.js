@@ -132,7 +132,7 @@ const ChromaGrid = ({ items, className = '', radius = 300, damping = 0.45, fadeO
           style={{
             '--card-border': c.borderColor || 'transparent',
             background: c.gradient,
-            '--spotlight-color': 'rgba(255,255,255,0.3)'
+            '--spotlight-color': 'rgba(255, 255, 255, 0)'
           }}
         >
           <div

@@ -64,7 +64,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className="relative bg-gradient-to-b from-pink-400 to-pink-900 sticky top-0 z-50 shadow-lg shadow-pink-500/20">
+    <nav className="relative bg-gradient-to-l from-dark via-pink-400 to-dark sticky top-0 z-50 shadow-lg shadow-pink-500/20">
       {/* Mini logo positioned absolutely to the left */}
       <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
         <Link href="/" aria-label="Accueil" className="flex items-center">
@@ -100,7 +100,7 @@ export default function Nav() {
 
             <div
               id="home-submenu"
-              className={`absolute mt-2 -right-2 w-44 bg-gradient-to-b from-pink-400 to-pink-900 backdrop-blur-sm rounded shadow-md py-2 transition-transform origin-top-right ${
+              className={`absolute mt-2 -right-2 w-44 bg-transparent to-pink-900 opacity-0 backdrop-blur-sm rounded shadow-md py-2 transition-transform origin-top-right ${
                 open ? 'scale-100 opacity-100' : 'scale-95 opacity-0 pointer-events-none'
               }`}
             >
@@ -146,7 +146,7 @@ export default function Nav() {
 
             <div
               id="portfolio-submenu"
-              className={`absolute mt-2 -right-2 w-44 bg-gradient-to-b from-pink-400 to-pink-900 backdrop-blur-sm rounded shadow-md py-2 transition-transform origin-top-right ${
+              className={`absolute mt-2 -right-2 w-44 bg-transparent backdrop-blur-sm rounded shadow-md py-2 transition-transform origin-top-right ${
                 portfolioOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0 pointer-events-none'
               }`}
             >
@@ -180,7 +180,7 @@ export default function Nav() {
           <li>
             <Link href="/flash" className="px-1">
               <p className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">
-                Flash dispo
+                Mes dessins
               </p>
             </Link>
           </li>
