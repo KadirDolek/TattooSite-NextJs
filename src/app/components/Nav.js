@@ -54,13 +54,12 @@ export default function Nav() {
 
     // pas de hash et même path : noop
   };
-
+     // gérer hrefs relatifs comme "#contact"
   const onAnchorClick = (e, href) => {
     e?.preventDefault();
     setOpen(false);
     setPortfolioOpen(false);
     setMobileOpen(false);
-    // gérer hrefs relatifs comme "#contact"
     const normalized = href.startsWith('#') ? `${window.location.pathname}${href}` : href;
     navigateToHash(normalized);
   };
@@ -183,7 +182,7 @@ export default function Nav() {
           <li>
             <Link href="/craft" className="px-1">
               <p className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">
-                Craft & Brol
+                Crafts & Brol
               </p>
             </Link>
           </li>

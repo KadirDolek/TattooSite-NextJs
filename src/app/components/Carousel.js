@@ -24,14 +24,16 @@ export default function CarouselSection() {
       <div className="relative z-10 flex flex-col md:flex-row w-full max-w-5xl mx-auto mt-6 rounded-xl transition-transform duration-300 hover:scale-102 shadow-[0_0_0px_3px_rgba(255,0,150,0.5)]">
         {/* Description */}
         <div className="flex-1 bg-transparent p-4 md:p-6 rounded-t-xl md:rounded-l-xl md:rounded-tr-none">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-pink-600 text-center bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">A propos de moi</h2>
-          <p className="bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent text-base md:text-lg text-center mb-6 ">
-            Ceci est un espace pour la description. Vous pouvez y ajouter du texte explicatif, des détails ou tout autre contenu pertinent.
+          <h2 className="md:text-4xl font-bold mb-10 text-pink-600 text-left bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">A propos de moi</h2>
+          <p className="bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent text-base md:text-md text-left mb-6 font-bold ">
+            Ceci est un espace pour la description. Vous pouvez y ajouter du texte explicatif, des détails ou tout autre contenu pertinent. <br/>Lorem20
+            ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nostrud exercitation ullamco. Lorem10
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum..
           </p>
         </div>
 
         {/* Carousel */}
-        <div className="relative flex-1 h-64 md:h-72 w-full">
+        <div className="relative flex-1 h-64 md:h-92 w-full">
           <Image
             src={images[current]}
             alt={`Image ${current + 1}`}

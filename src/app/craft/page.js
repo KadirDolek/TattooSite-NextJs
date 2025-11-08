@@ -19,8 +19,8 @@ export default function Craft () {
                         className="w-full h-80 object-cover rounded-lg shadow-lg"
                       />
                     </div>
-                    <div className="w-full md:w-1/2 text-white">
-                      <h2 className="text-2xl font-bold mb-4">Créations Artisanales</h2>
+                    <div className="w-full md:w-1/2 text-white border-2 border-pink-300 pb-24 pt-8 px-12 rounded-lg">
+                      <h2 className="text-2xl font-bold mb-10 border-b-2">Créations Artisanales</h2>
                       <p className="text-gray-100 leading-relaxed">
                         Découvrez nos créations uniques, faites à la main avec passion et attention aux détails. Chaque pièce raconte une histoire et apporte une touche personnelle à votre quotidien.
                       </p>
@@ -36,8 +36,8 @@ export default function Craft () {
                         className="w-full h-80 object-cover rounded-lg shadow-lg"
                       />
                     </div>
-                    <div className="w-full md:w-1/2 text-white">
-                      <h2 className="text-2xl font-bold mb-4">Matériaux Durables</h2>
+                    <div className="w-full md:w-1/2 text-white border-2 border-pink-300 pb-24 pt-8 px-12 rounded-lg">
+                      <h2 className="text-2xl font-bold mb-10 border-b-2">Matériaux Durables</h2>
                       <p className="text-gray-100 leading-relaxed">
                         Nous utilisons des matériaux soigneusement sélectionnés pour leur qualité et leur durabilité. Notre engagement pour l'environnement se reflète dans chaque création.
                       </p>
@@ -53,8 +53,8 @@ export default function Craft () {
                         className="w-full h-80 object-cover rounded-lg shadow-lg"
                       />
                     </div>
-                    <div className="w-full md:w-1/2 text-white">
-                      <h2 className="text-2xl font-bold mb-4">Techniques Traditionnelles</h2>
+                    <div className="w-full md:w-1/2 text-white border-2 border-pink-300 pb-24 pt-8 px-12 rounded-lg">
+                      <h2 className="text-2xl font-bold mb-10 border-b-2">Techniques Traditionnelles</h2>
                       <p className="text-gray-100 leading-relaxed">
                         Nos artisans maîtrisent des techniques ancestrales transmises de génération en génération. Ce savoir-faire garantit l'authenticité et la qualité de nos produits.
                       </p>
@@ -70,8 +70,8 @@ export default function Craft () {
                         className="w-full h-80 object-cover rounded-lg shadow-lg"
                       />
                     </div>
-                    <div className="w-full md:w-1/2 text-white">
-                      <h2 className="text-2xl font-bold mb-4">Personnalisation</h2>
+                    <div className="w-full md:w-1/2 text-white w-full md:w-1/2 text-white border-2 border-pink-300 pb-24 pt-8 px-12 rounded-lg">
+                      <h2 className="text-2xl font-bold mb-10 border-b-2">Personnalisation</h2>
                       <p className="text-gray-100 leading-relaxed">
                         Chaque commande peut être personnalisée selon vos envies. Nous travaillons en étroite collaboration avec vous pour créer la pièce parfaite qui correspond à vos besoins.
                       </p>
@@ -87,8 +87,8 @@ export default function Craft () {
                         className="w-full h-80 object-cover rounded-lg shadow-lg"
                       />
                     </div>
-                    <div className="w-full md:w-1/2 text-white">
-                      <h2 className="text-2xl font-bold mb-4">Passion & Expertise</h2>
+                    <div className="w-full md:w-1/2 text-white w-full md:w-1/2 text-white border-2 border-pink-300 pb-24 pt-8 px-12 rounded-lg">
+                      <h2 className="text-2xl font-bold mb-10 border-b-2">Passion & Expertise</h2>
                       <p className="text-gray-100 leading-relaxed">
                         Notre équipe partage la même passion pour l'artisanat de qualité. Chaque création est le fruit d'années d'expérience et d'un amour inconditionnel pour notre métier.
                       </p>
