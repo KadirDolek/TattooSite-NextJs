@@ -87,24 +87,20 @@ export default function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center sm:text-left">
             {/* Brand */}
             <div className="flex flex-col gap-4">
-              <Link href="/">
+              <Link href="https://www.instagram.com/baabyalish.ttt/?hl=fr">
                 <p className="font-bold text-xl text-pink-200">@BaabyAlish</p>
               </Link>
               <p className="text-sm text-gray-400 max-w-sm">
                 Portfolio & créations. Disponible pour commandes et collaborations.
               </p>
               <div className="flex space-x-3 justify-center sm:justify-start">
-                <a href="https://instagram.com/tonprofil" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded-md bg-gray-800 hover:bg-gray-700">
+                <a href="https://www.instagram.com/baabyalish.ttt/?hl=fr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded-md bg-gray-800 hover:bg-gray-700">
                   <svg className="w-5 h-5 text-pink-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                   </svg>
                 </a>
-                <a href="https://twitter.com/tonprofil" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="p-2 rounded-md bg-gray-800 hover:bg-gray-700">
-                  <svg className="w-5 h-5 text-sky-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M20 7.5c-.6.3-1.2.5-1.9.6a3.3 3.3 0 0 0 1.4-1.8 6.6 6.6 0 0 1-2.1.8 3.3 3.3 0 0 0-5.6 3 9.4 9.4 0 0 1-6.8-3.4 3.3 3.3 0 0 0 1 4.4c-.5 0-1-.1-1.4-.4 0 1.6 1.2 3 2.7 3.3a3.3 3.3 0 0 1-1.5.1 3.3 3.3 0 0 0 3.1 2.3 6.6 6.6 0 0 1-4.1 1.4A6.9 6.9 0 0 1 3 19.2a9.4 9.4 0 0 0 5.1 1.5c6.1 0 9.4-5 9.4-9.4v-.4c.6-.4 1.1-1 1.5-1.6z" />
-                  </svg>
-                </a>
-                <a href="mailto:ton@mail@exemple.com" aria-label="Email" className="p-2 rounded-md bg-gray-800 hover:bg-gray-700">
+                
+                <a href="mailto:alison_OT@outlook.com" aria-label="Email" className="p-2 rounded-md bg-gray-800 hover:bg-gray-700">
                   <svg className="w-5 h-5 text-emerald-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-11zm2.2 0L12 11.3l7.8-4.8H4.2z" />
                   </svg>

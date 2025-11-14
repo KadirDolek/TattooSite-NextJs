@@ -6,7 +6,7 @@ export default function Mosaique() {
     return(
         <section className="max-w-6xl mx-auto px-6 py-8 w-full">
         <h2 className='flex justify-left text-3xl bg-gradient-to-br font-bold from-white to-pink-400 bg-clip-text text-transparent my-12'>Mes dernières créations :</h2>
-        <div className="grid grid-cols-3 grid-rows-2 gap-4 h-[600px]">
+        <div className="grid grid-cols-3 grid-rows-2 gap-4 h-[200px]">
           {/* Petite */}
           <div className="bg-gradient-to-br from-red-00 to-pink-400 rounded-lg h-full shadow-xl hover:scale-102" aria-hidden="true">
              <Link href="/tattoo" className="">

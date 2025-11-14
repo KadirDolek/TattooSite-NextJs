@@ -4,48 +4,100 @@ import { useGesture } from '@use-gesture/react';
 
 const DEFAULT_IMAGES = [
   {
-    src: '/dessin1.jpg',
+    src: '/flash1.jpg',
     alt: 'Photo 1'
   },
   {
-    src: '/dessin2.jpg',
+    src: '/flash2.jpg',
     alt: 'Photo 2'
   },
   {
-    src: '/dessin3.jpg',
+    src: '/flash3.jpg',
     alt: 'Photo 3'
   },
   {
-    src: '/dessin4.jpg',
+    src: '/flash4.jpg',
     alt: 'Photo 4'
   },
   {
-    src: '/dessin5.jpg',
+    src: '/flash5.jpg',
     alt: 'Photo 5'
   },
   {
-    src: '/dessin6.jpg',
+    src: '/flash6.jpg',
     alt: 'Photo 6'
   },
   {
-    src: '/dessin7.jpg',
+    src: '/flash7.jpg',
     alt: 'Photo 7'
   },
   {
-    src: '/dessin8.jpg',
+    src: '/flash8.jpg',
     alt: 'Photo 8'
   },
   {
-    src: '/dessin9.jpg',
+    src: '/flash9.jpg',
     alt: 'Photo 9'
-  }
+  },
+  {
+    src: '/flash10.jpg',
+    alt: 'Photo 10'
+  },
+  {
+    src: '/flash11.jpg',
+    alt: 'Photo 11'
+  },
+  {
+    src: '/flash12.jpg',
+    alt: 'Photo 12'
+  },
+  {
+    src: '/flash13.jpg',
+    alt: 'Photo 13'
+  },
+  {
+    src: '/flash14.jpg',
+    alt: 'Photo 14'
+  },
+  {
+    src: '/flash15.jpg',
+    alt: 'Photo 15'
+  },
+  {
+    src: '/flash16.jpg',
+    alt: 'Photo 16'
+  },
+  {
+    src: '/flash17.jpg',
+    alt: 'Photo 17'
+  },
+  {
+    src: '/flash18.jpg',
+    alt: 'Photo 19'
+  },
+  {
+    src: '/flash19.jpg',
+    alt: 'Photo 19'
+  },
+  {
+    src: '/flash20.jpg',
+    alt: 'Photo 20'
+  },
+  {
+    src: '/flash21.jpg',
+    alt: 'Photo 21'
+  },
+  {
+    src: '/flash22.jpg',
+    alt: 'Photo 22'
+  },
 ];
 
 const DEFAULTS = {
   maxVerticalRotationDeg: 5,
   dragSensitivity: 20,
   enlargeTransitionMs: 300,
-  segments: 28
+  segments: 32
 };
 
 const clamp = (v, min, max) => Math.min(Math.max(v, min), max);

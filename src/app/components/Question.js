@@ -4,7 +4,7 @@
 
 export default function Question() {
     return(
-        <section className="max-w-6xl mx-auto px-4 py-8 w-full my-42 scale-90">
+        <section className="max-w-6xl mx-auto px-4 py-8 w-full  scale-90">
         <div className="rounded-lg overflow-hidden bg-gradient-to-br from-red-00 to-pink-400 md:h-auto flex flex-col items-stretch justify-center p-6 gap-6">
           <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">Questions souvent posées</h3>
           <div className="w-full">
