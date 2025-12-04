@@ -40,10 +40,10 @@ export default function Question() {
                 </svg>
               </summary>
               <div className="px-5 pb-5 pt-2 text-gray-700 font-bold">
-                Vous pouvez me contacter sur Instagram à @baabyalish.ttt ou par mail à alison_OT@hotmail.com avec comme informations : 
-                -Le flash ou le concept souhaité 
-                -La taille ainsi que le placement 
-                -Les détails additionnels (couleurs, modifications si c’est un flash, etc) 
+                Vous pouvez me contacter sur Instagram à @baabyalish.ttt ou par mail à alison_OT@hotmail.com avec comme informations : <br/> 
+                -Le flash ou le concept souhaité  <br/> 
+                -La taille ainsi que le placement <br/> 
+                -Les détails additionnels (couleurs, modifications si c’est un flash, etc) <br/> 
                 -Vos disponibilités 
               </div>
             </details>
