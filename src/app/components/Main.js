@@ -12,6 +12,7 @@ export default function Main() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           className="w-full h-full object-cover"
+          style={{ pointerEvents: 'none' }}
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>
