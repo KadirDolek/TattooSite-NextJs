@@ -13,31 +13,8 @@ export default function Flash() {
     './dessin7.jpg',
     './dessin8.jpg',
     './dessin9.jpg',
-    './dessin10.jpg',
-    './dessin11.jpg',
-    './dessin12.jpg',
-    './dessin13.jpg',
-    './dessin14.jpg',
-    './dessin15.jpg',
   ];
 
-  const spans = [
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-1',
-    'col-span-2 row-span-2',
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-1',
-    'col-span-3 row-span-1',
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-1',
-  ];
 
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -48,6 +25,7 @@ export default function Flash() {
           <h1 className="text-2xl md:text-3xl font-semibold text-center mt-12 mb-12 bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">
             Tous mes dessins réalisés 
           </h1>
+          <h3 className='text-center mb-12'>Texte description</h3>
         </div> 
         
         <section className="container mx-auto max-w-7xl">
@@ -56,9 +34,9 @@ export default function Flash() {
               <div
                 key={i}
                 className={`bg-gradient-to-br from-pink-400 to-red-300 rounded-xl shadow-xl cursor-pointer overflow-hidden
-                ${i === 6 ? 'md:col-span-2 md:row-span-2' : ''}
-                ${i === 11 ? 'md:col-span-1 md:row-span-1' : ''}
-                ${i === 3 ? 'md:row-span-1 md:col-span-2'  : ''}
+                ${i === 6 ? 'md:col-span-1 md:row-span-1' : ''}
+                ${i === 11 ? 'md:col-span-2 md:row-span-1' : ''}
+                ${i === 3 ? 'md:row-span-3 md:col-span-2'  : ''}
                 ${i === 8 ? 'md:col-span-2 md:row-span-1'  : ''}`}
                 onClick={() => setSelectedImage(image)}
               >

@@ -4,18 +4,20 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 const images = [
-  '/dessin1.jpg',
-  '/dessin2.jpg',
-  '/dessin3.jpg',
+  '/artist.jpg',
+  '/artist2.jpg',
+  '/artist3.jpg',
 ];
 
 export default function CarouselSection() {
   const [current, setCurrent] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 4000);
+  
+
+  useEffect(()=>{
+    const interval = setInterval(()=>{
+      setCurrent((prev)=>(prev +1) % images.length);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -24,11 +26,11 @@ export default function CarouselSection() {
       <div className="relative z-10 flex flex-col md:flex-row w-full max-w-5xl mx-auto mt-6 rounded-xl transition-transform duration-300 hover:scale-102 shadow-[0_0_0px_3px_rgba(255,0,150,0.5)]">
         {/* Description */}
         <div className="flex-1 bg-transparent p-4 md:p-6 rounded-t-xl md:rounded-l-xl md:rounded-tr-none">
-          <h2 className="md:text-4xl font-bold mb-10 text-pink-600 text-left bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">A propos de moi</h2>
-          <p className="bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent text-base md:text-md text-left mb-6 font-bold ">
-            Ceci est un espace pour la description. Vous pouvez y ajouter du texte explicatif, des détails ou tout autre contenu pertinent. <br/>Lorem20
-            ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nostrud exercitation ullamco. Lorem10
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum..
+          <h2 className="md:text-4xl font-bold mb-10 text-pink-600 text-left bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">About me</h2>
+          <p className="bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent text-base md:text-[17px] text-left mb-6 font-bold ">
+            My name is Alison and I’m a tattoo artist based in Auderghem. <br/> A fan of Sanrio, Pokémon, neo-tribal designs, and the color pink in general (as you can see on this site!), 
+          <br/>  I’m also interested in many other forms of art such as sculpture, painting, and crafting.
+           <br/><br/> Take a look at my creations and, most importantly, don’t hesitate to book an appointment! ☆
           </p>
         </div>
 
