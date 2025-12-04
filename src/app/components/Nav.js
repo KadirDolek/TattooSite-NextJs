@@ -182,7 +182,7 @@ export default function Nav() {
           <li>
             <Link href="/craft" className="px-1">
               <p className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">
-                Crafts & Brol
+                Crafts & Brol (en maintenance)
               </p>
             </Link>
           </li>
