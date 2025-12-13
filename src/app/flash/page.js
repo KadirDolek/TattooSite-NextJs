@@ -23,9 +23,9 @@ export default function Flash() {
       <section className="relative w-full h-auto overflow-hidden px-4 mb-12">
         <div>
           <h1 className="text-2xl md:text-3xl font-semibold text-center mt-12 mb-12 bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">
-            Tous mes dessins réalisés 
+            All my drawings
           </h1>
-          <h3 className='text-center mb-12'>Texte description</h3>
+          <h3 className='text-center mb-12'>Description text</h3>
         </div> 
         
         <section className="container mx-auto max-w-7xl">

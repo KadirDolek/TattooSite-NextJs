@@ -1,7 +1,7 @@
 
 export const metadata = {
   title: 'FAQ',
-  description: 'Foire aux questions — portfolio, commandes, contact',
+  description: 'Frequently Asked Questions — portfolio, orders, contact',
 };
 
 export default function FAQPage() {
@@ -10,91 +10,91 @@ export default function FAQPage() {
       <div className="max-w-4xl mx-auto print:max-w-full">
         <header className="mb-6">
           <h1 className="text-3xl font-semibold">FAQ</h1>
-          <p className="text-sm text-gray-600 mt-1">Questions fréquentes — portfolio, commandes et contact</p>
+          <p className="text-sm text-gray-600 mt-1">Frequently Asked Questions — portfolio, orders and contact</p>
         </header>
 
         <article className="space-y-8">
           <section>
-            <h2 className="text-xl font-semibold mb-2">Général</h2>
+            <h2 className="text-xl font-semibold mb-2">General</h2>
             <dl className="space-y-2 text-gray-800">
               <div>
-                <dt className="font-medium">Qu’est‑ce que ce site présente ?</dt>
-                <dd>Un portfolio présentant tatouages, dessins et créations artisanales de l’artiste, avec galeries, infos contact et possibilité de commande.</dd>
+                <dt className="font-medium">What does this site showcase?</dt>
+                <dd>A portfolio featuring the artist's tattoos, drawings and handmade creations, with galleries, contact information and ordering options.</dd>
               </div>
               <div>
-                <dt className="font-medium">Comment prendre contact ?</dt>
-                <dd>Utilise le formulaire de contact sur le site ou l’adresse e‑mail indiquée dans le footer. Les demandes sont traitées sous 48–72 heures en général.</dd>
+                <dt className="font-medium">How do I get in touch?</dt>
+                <dd>Use the contact form on the site or the email address provided in the footer. Requests are typically processed within 48–72 hours.</dd>
               </div>
             </dl>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold mb-2">Commandes et réservations</h2>
+            <h2 className="text-xl font-semibold mb-2">Orders and Bookings</h2>
             <dl className="space-y-2 text-gray-800">
               <div>
-                <dt className="font-medium">Rendez‑vous pour tatouage</dt>
-                <dd>Oui — envoie une demande via le formulaire en précisant style, taille estimée, emplacement et photos de référence. Un échange permettra d’estimer prix et disponibilité.</dd>
+                <dt className="font-medium">Tattoo Appointment</dt>
+                <dd>Yes — submit a request via the form specifying style, estimated size, placement and reference photos. An exchange will help estimate price and availability.</dd>
               </div>
               <div>
-                <dt className="font-medium">Oeuvres personnalisées</dt>
-                <dd>Décris l’idée, format, délai et budget via le formulaire. Un devis et un délai seront proposés ensuite.</dd>
+                <dt className="font-medium">Custom Artwork</dt>
+                <dd>Describe the idea, format, timeframe and budget via the form. A quote and deadline will be provided.</dd>
               </div>
               <div>
-                <dt className="font-medium">Acompte</dt>
-                <dd>Un acompte est demandé pour réserver la date ou lancer la production ; le montant sera précisé dans le devis.</dd>
+                <dt className="font-medium">Deposit</dt>
+                <dd>A deposit is required to reserve the date or start production; the amount will be specified in the quote.</dd>
               </div>
             </dl>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold mb-2">Tarifs, paiements et livraisons</h2>
+            <h2 className="text-xl font-semibold mb-2">Pricing, Payments and Shipping</h2>
             <dl className="space-y-2 text-gray-800">
               <div>
-                <dt className="font-medium">Comment sont déterminés les prix ?</dt>
-                <dd>Les prix dépendent du format, complexité, temps estimé et matériaux. Un devis détaillé est fourni avant acceptation.</dd>
+                <dt className="font-medium">How are prices determined?</dt>
+                <dd>Prices depend on format, complexity, estimated time and materials. A detailed quote is provided before acceptance.</dd>
               </div>
               <div>
-                <dt className="font-medium">Moyens de paiement</dt>
-                <dd>Carte, virement, espèces ou PayPal peuvent être proposés selon le contexte ; les options seront indiquées au moment du paiement.</dd>
+                <dt className="font-medium">Payment Methods</dt>
+                <dd>Card, bank transfer, cash or PayPal may be offered depending on context; options will be indicated at payment time.</dd>
               </div>
               <div>
-                <dt className="font-medium">Délais de livraison</dt>
-                <dd>Dépend du type d’objet : délai de production + expédition. Une estimation est fournie lors de la commande.</dd>
+                <dt className="font-medium">Delivery Times</dt>
+                <dd>Depends on the type of item: production time + shipping. An estimate is provided when you order.</dd>
               </div>
             </dl>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold mb-2">Droits d’auteur et usage</h2>
+            <h2 className="text-xl font-semibold mb-2">Copyright and Usage</h2>
             <dl className="space-y-2 text-gray-800">
               <div>
-                <dt className="font-medium">Utilisation d’images du portfolio</dt>
-                <dd>Demande l’autorisation via le formulaire. L’usage privé peut être accordé ; l’usage commercial nécessite une licence écrite et peut être rémunéré.</dd>
+                <dt className="font-medium">Using Portfolio Images</dt>
+                <dd>Request permission via the form. Private use may be granted; commercial use requires a written license and may be paid.</dd>
               </div>
               <div>
-                <dt className="font-medium">Tatouages et droits d’auteur</dt>
-                <dd>Les dessins originaux sont protégés. Pour reproduction publique ou commerciale, une autorisation/licence peut être nécessaire.</dd>
+                <dt className="font-medium">Tattoos and Copyright</dt>
+                <dd>Original designs are protected. For public or commercial reproduction, permission/license may be required.</dd>
               </div>
             </dl>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold mb-2">Préparation et support</h2>
+            <h2 className="text-xl font-semibold mb-2">Preparation and Support</h2>
             <dl className="space-y-2 text-gray-800">
               <div>
-                <dt className="font-medium">Préparation au rendez‑vous</dt>
-                <dd>Apporte photos de référence, pièce d’identité si nécessaire et toute information médicale utile. Arrive reposé et hydraté.</dd>
+                <dt className="font-medium">Appointment Preparation</dt>
+                <dd>Bring reference photos, ID if necessary and any relevant medical information. Arrive rested and hydrated.</dd>
               </div>
               <div>
-                <dt className="font-medium">Pas de réponse reçue</dt>
-                <dd>Vérifie le dossier spam puis renvoie un message via le formulaire en précisant la date de la première demande. Si besoin, contacte l’adresse mail publique du site.</dd>
+                <dt className="font-medium">No Response Received</dt>
+                <dd>Check your spam folder then resend a message via the form specifying the date of your first request. If needed, contact the public email on the site.</dd>
               </div>
             </dl>
           </section>
         </article>
 
         <footer className="mt-10 text-sm text-gray-600">
-          <p>Pour toute question non couverte ici, utilise le formulaire de contact ou l’adresse e‑mail dans le footer.</p>
+          <p>For any questions not covered here, use the contact form or the email address in the footer.</p>
         </footer>
       </div>
     </main>
