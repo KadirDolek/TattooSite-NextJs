@@ -68,7 +68,7 @@ export default function Nav() {
     <nav className="relative bg-gradient-to-l from-dark via-pink-400 to-dark sticky top-0 z-50 shadow-lg shadow-pink-500/20">
       {/* Mini logo positioned absolutely to the left */}
       <div className="absolute left-4 top-7 transform -translate-y-1/2">
-        <Link href="/" aria-label="Accueil" className="flex items-center">
+        <Link href="/" aria-label="Home" className="flex items-center">
           <svg
             width="36"
             height="36"
@@ -88,7 +88,7 @@ export default function Nav() {
       {/* Hamburger for mobile (visible only on small screens) */}
       <button
         type="button"
-        aria-label={mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+        aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
         onClick={() => { setMobileOpen((s) => !s); setOpen(false); setPortfolioOpen(false); }}
         className="md:hidden absolute right-4 mt-6 top-1/2 transform -translate-y-1/2 z-50 p-2 rounded-md text-white/90 bg-black/20 hover:bg-black/30"
       >
@@ -124,7 +124,7 @@ export default function Nav() {
                     onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') onAnchorClick(e, '/#about'); }}
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-50 cursor-pointer"
                   >
-                    <span className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold">À propos de moi</span>
+                    <span className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold">About me</span>
                   </p>
                 </li>
                 <li>
@@ -164,14 +164,14 @@ export default function Nav() {
                 <li>
                   <Link href="/tattoo" onClick={() => setPortfolioOpen(false)}>
                     <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-50 cursor-pointer">
-                      <span className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold">Tattoo réalisé</span>
+                      <span className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold">Completed Tattoos</span>
                     </p>
                   </Link>
                 </li>
                 <li>
                   <Link href="/dessin" onClick={() => setPortfolioOpen(false)}>
                     <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-50 cursor-pointer">
-                      <span className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold">Flash dispo</span>
+                      <span className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold">Available Flash</span>
                     </p>
                   </Link>
                 </li>
@@ -182,7 +182,7 @@ export default function Nav() {
           <li>
             <Link href="/craft" className="px-1">
               <p className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">
-                Crafts & Brol (en maintenance)
+                Crafts & Brol (in maintenance)
               </p>
             </Link>
           </li>
@@ -190,7 +190,7 @@ export default function Nav() {
           <li>
             <Link href="/flash" className="px-1">
               <p className="bg-gradient-to-b from-white to-pink-400 bg-clip-text text-transparent font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">
-                Mes dessins
+                My Drawings
               </p>
             </Link>
           </li>
@@ -208,7 +208,7 @@ export default function Nav() {
                   onClick={() => onAnchorClick(null, '/#about')}
                   className="w-full text-left px-3 py-2 rounded-md text-white/90 hover:bg-white/5"
                 >
-                  À propos de moi
+                  About me
                 </button>
               </li>
               <li>
@@ -227,12 +227,12 @@ export default function Nav() {
 
               <li>
                 <Link href="/tattoo" onClick={() => setMobileOpen(false)}>
-                  <p className="px-3 py-2 rounded-md text-white/90 hover:bg-white/5">Tattoo réalisé</p>
+                  <p className="px-3 py-2 rounded-md text-white/90 hover:bg-white/5">Completed Tattoos</p>
                 </Link>
               </li>
               <li>
                 <Link href="/dessin" onClick={() => setMobileOpen(false)}>
-                  <p className="px-3 py-2 rounded-md text-white/90 hover:bg-white/5">Flash dispo</p>
+                  <p className="px-3 py-2 rounded-md text-white/90 hover:bg-white/5">Available Flash</p>
                 </Link>
               </li>
 
@@ -242,12 +242,12 @@ export default function Nav() {
 
               <li>
                 <Link href="/craft" onClick={() => setMobileOpen(false)}>
-                  <p className="px-3 py-2 rounded-md text-white/90 hover:bg-white/5">Craft & Brol</p>
+                  <p className="px-3 py-2 rounded-md text-white/90 hover:bg-white/5">Crafts & Brol</p>
                 </Link>
               </li>
               <li>
                 <Link href="/flash" onClick={() => setMobileOpen(false)}>
-                  <p className="px-3 py-2 rounded-md text-white/90 hover:bg-white/5">Mes dessins</p>
+                  <p className="px-3 py-2 rounded-md text-white/90 hover:bg-white/5">My Drawings</p>
                 </Link>
               </li>
             </ul>

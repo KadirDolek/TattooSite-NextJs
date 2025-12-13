@@ -43,7 +43,7 @@ export default function Footer() {
     setErrorMsg(null);
 
     if (!name.trim() || !email.trim() || !message.trim()) {
-      setErrorMsg('Merci de remplir tous les champs.');
+      setErrorMsg('Please fill in all fields.');
       return;
     }
 
@@ -58,7 +58,7 @@ export default function Footer() {
 
       const data = await res.json();
       if (!res.ok) {
-        setErrorMsg(data?.error || 'Erreur serveur');
+        setErrorMsg(data?.error || 'Server error');
         setStatus('error');
         return;
       }
@@ -75,7 +75,7 @@ export default function Footer() {
       }, 1400);
     } catch (err) {
       console.error(err);
-      setErrorMsg("Impossible d'envoyer le message. Réessaie plus tard.");
+      setErrorMsg("Unable to send message. Try again later.");
       setStatus('error');
     }
   }
@@ -91,7 +91,7 @@ export default function Footer() {
                 <p className="font-bold text-xl text-pink-200">@BaabyAlish</p>
               </Link>
               <p className="text-sm text-gray-400 max-w-sm">
-                Portfolio & créations. Disponible pour commandes et collaborations.
+                Portfolio & creations. Available for commissions and collaborations.
               </p>
               <div className="flex space-x-3 justify-center sm:justify-start">
                 <a href="https://www.instagram.com/baabyalish.ttt/?hl=fr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded-md bg-gray-800 hover:bg-gray-700">
@@ -114,15 +114,15 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold text-pink-200">Navigation</h3>
                 <ul className="mt-3 space-y-2">
                   <li><Link href="/"><p className="text-sm text-gray-400 hover:text-white">Home</p></Link></li>
-                  <li><Link href="/tattoo"><p className="text-sm text-gray-400 hover:text-white">Portfolio tattoo</p></Link></li>
-                  <li><Link href="/flash"><p className="text-sm text-gray-400 hover:text-white">Portfolio dessins</p></Link></li>
-                  <li><Link href="/craft"><p className="text-sm text-gray-400 hover:text-white">Craft & Brol</p></Link></li>
-                  <li><Link href="/dessin"><p className="text-sm text-gray-400 hover:text-white">Mes flashs</p></Link></li>
+                  <li><Link href="/tattoo"><p className="text-sm text-gray-400 hover:text-white">Tattoo Portfolio</p></Link></li>
+                  <li><Link href="/flash"><p className="text-sm text-gray-400 hover:text-white">Drawing Portfolio</p></Link></li>
+                  <li><Link href="/craft"><p className="text-sm text-gray-400 hover:text-white">Crafts & Brol</p></Link></li>
+                  <li><Link href="/dessin"><p className="text-sm text-gray-400 hover:text-white">My Flash Designs</p></Link></li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-sm font-semibold text-pink-200">Aide</h3>
+                <h3 className="text-sm font-semibold text-pink-200">Help</h3>
                 <ul className="mt-3 space-y-2">
                   <li>
                     <button
@@ -142,18 +142,18 @@ export default function Footer() {
             {/* petit rappel/call to action */}
             <div className="flex flex-col gap-3 items-center sm:items-start">
               <h3 className="text-sm font-semibold text-pink-200">Contact</h3>
-              <p className="text-sm text-gray-400">Envoie-moi un message — il arrivera directement dans ma boîte.</p>
+              <p className="text-sm text-gray-400">Send me a message — it will go straight to my inbox.</p>
               <button
                 onClick={() => setIsModalOpen(true)}
                 className="mt-2 inline-block px-4 py-2 bg-gradient-to-b from-pink-400 to-pink-900 text-white rounded hover:bg-pink-600 cursor-pointer text-sm text-center"
               >
-                Ouvrir le formulaire
+                Open the form
               </button>
             </div>
           </div>
 
           <div className="mt-8 pt-6 flex flex-col md:flex-row items-center justify-center text-center">
-            <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} BaabyAlish. Tous droits réservés. Réalisé par Kadir Dölek</p>
+            <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} BaabyAlish. All rights reserved. Made by Kadir Dölek</p>
           </div>
         </div>
       </footer>
@@ -180,20 +180,20 @@ export default function Footer() {
                 <button
                   onClick={() => setIsModalOpen(false)}
                   className="text-gray-400 hover:text-white rounded p-1"
-                  aria-label="Fermer"
+                  aria-label="Close"
                 >
                   ✕
                 </button>
               </div>
 
-              <p className="text-sm text-white mt-2">Envoie-moi un message — il arrivera directement dans ma boîte.</p>
+              <p className="text-sm text-white mt-2">Send me a message — it will go straight to my inbox.</p>
 
               <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-3">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   <input
                     ref={firstFieldRef}
                     type="text"
-                    placeholder="Ton nom"
+                    placeholder="Your name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="w-full px-3 py-2 bg-pink-200 text-gray-800 placeholder-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-pink-400"
@@ -202,7 +202,7 @@ export default function Footer() {
                   />
                   <input
                     type="email"
-                    placeholder="ton@mail.com"
+                    placeholder="your@email.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full px-3 py-2 bg-pink-200 text-gray-800 placeholder-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-pink-400"
@@ -211,7 +211,7 @@ export default function Footer() {
                 </div>
 
                 <textarea
-                  placeholder="Ton message..."
+                  placeholder="Your message..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   className="w-full px-3 py-2 bg-pink-200 text-gray-800 placeholder-gray-400 rounded h-28 resize-y focus:outline-none focus:ring-2 focus:ring-pink-400"
@@ -227,18 +227,18 @@ export default function Footer() {
                     disabled={status === 'loading'}
                     className="px-4 py-2 bg-gradient-to-b from-pink-400 to-pink-900 text-white rounded hover:bg-pink-600 disabled:opacity-50"
                   >
-                    {status === 'loading' ? 'Envoi...' : 'Envoyer'}
+                    {status === 'loading' ? 'Sending...' : 'Send'}
                   </button>
 
-                  {status === 'success' && <span className="text-sm text-emerald-400">Message envoyé !</span>}
-                  {status === 'error' && <span className="text-sm text-red-400">Erreur lors de l'envoi</span>}
+                  {status === 'success' && <span className="text-sm text-emerald-400">Message sent!</span>}
+                  {status === 'error' && <span className="text-sm text-red-400">Error sending message</span>}
 
                   <button
                     type="button"
                     onClick={() => setIsModalOpen(false)}
                     className="ml-auto text-sm text-gray-400 hover:text-white"
                   >
-                    Annuler
+                    Cancel
                   </button>
                 </div>
               </form>
