@@ -25,7 +25,7 @@ export default function Flash() {
           <h1 className="text-2xl md:text-3xl font-semibold text-center mt-12 mb-12 bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">
             All my drawings
           </h1>
-          <h3 className='text-center mb-12'>Description text</h3>
+        
         </div> 
         
         <section className="container mx-auto max-w-7xl">
