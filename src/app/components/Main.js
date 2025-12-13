@@ -14,7 +14,7 @@ export default function Main() {
           className="w-full h-full object-cover"
           style={{ pointerEvents: 'none' }}
         >
-          <source src="./myMelody.mp4" type="video/mp4" />
+          <source src="./myMelody2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/60" />
