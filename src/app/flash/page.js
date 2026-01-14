@@ -1,22 +1,35 @@
 'use client'
 import Footer from '../components/Footer';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Flash() {
-  const images = [
-    './dessin1.jpg',
-    './dessin2.jpg',
-    './dessin3.jpg',
-    './dessin4.jpg',
-    './dessin5.jpg',
-    './dessin6.jpg',
-    './dessin7.jpg',
-    './dessin8.jpg',
-    './dessin9.jpg',
-  ];
-
-
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    fetchDrawings();
+  }, []);
+
+  const fetchDrawings = async () => {
+    try {
+      const response = await fetch('/api/drawings');
+      const data = await response.json();
+      setImages(data.drawings || []);
+    } catch (error) {
+      console.error('Error fetching drawings:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <main className="flex justify-center items-center flex-col bg-gradient-to-t from-dark via-pink-400 to-black min-h-screen">
+        <div className="text-white text-xl">Chargement...</div>
+      </main>
+    );
+  }
 
   return (
     <main className="flex justify-center flex-col bg-gradient-to-t from-dark via-pink-400 to-black min-h-screen">
@@ -25,24 +38,24 @@ export default function Flash() {
           <h1 className="text-2xl md:text-3xl font-semibold text-center mt-12 mb-12 bg-gradient-to-br from-white to-pink-400 bg-clip-text text-transparent">
             All my drawings
           </h1>
-        
-        </div> 
-        
+
+        </div>
+
         <section className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4 auto-rows-[200px] md:auto-rows-[150px]">
             {images.map((image, i) => (
               <div
-                key={i}
+                key={image.id}
                 className={`bg-gradient-to-br from-pink-400 to-red-300 rounded-xl shadow-xl cursor-pointer overflow-hidden
                 ${i === 6 ? 'md:col-span-1 md:row-span-1' : ''}
                 ${i === 11 ? 'md:col-span-2 md:row-span-1' : ''}
                 ${i === 3 ? 'md:row-span-3 md:col-span-2'  : ''}
                 ${i === 8 ? 'md:col-span-2 md:row-span-1'  : ''}`}
-                onClick={() => setSelectedImage(image)}
+                onClick={() => setSelectedImage(image.src)}
               >
                 <img
-                  src={image}
-                  alt={`Dessin ${i + 1}`}
+                  src={image.src}
+                  alt={image.alt || `Dessin ${i + 1}`}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>

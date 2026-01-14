@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
@@ -8,7 +8,30 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   const [portfolioOpen, setPortfolioOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [user, setUser] = useState(null);
   const router = useRouter();
+
+  useEffect(() => {
+    checkAuth();
+  }, []);
+
+  const checkAuth = async () => {
+    try {
+      const response = await fetch('/api/auth/me');
+      if (response.ok) {
+        const data = await response.json();
+        setUser(data.user);
+      }
+    } catch (error) {
+      setUser(null);
+    }
+  };
+
+  const handleLogout = async () => {
+    await fetch('/api/auth/logout', { method: 'POST' });
+    setUser(null);
+    router.push('/');
+  };
 
   const navigateToHash = (fullHref) => {
     // normaliser
@@ -194,6 +217,29 @@ export default function Nav() {
               </p>
             </Link>
           </li>
+
+          {/* Login/Admin Button */}
+          <li>
+            {user ? (
+              <div className="flex items-center gap-2">
+                {user.role === 'admin' && (
+                  <Link href="/admin" className="px-3 py-1 bg-pink-500/80 hover:bg-pink-600 text-white text-sm rounded-lg transition">
+                    Admin
+                  </Link>
+                )}
+                <button
+                  onClick={handleLogout}
+                  className="px-3 py-1 bg-black/30 hover:bg-black/50 text-white text-sm rounded-lg transition"
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <Link href="/login" className="px-3 py-1 bg-white/20 hover:bg-white/30 text-white text-sm rounded-lg transition">
+                Login
+              </Link>
+            )}
+          </li>
         </ul>
       </div>
 
@@ -249,6 +295,33 @@ export default function Nav() {
                 <Link href="/flash" onClick={() => setMobileOpen(false)}>
                   <p className="px-3 py-2 rounded-md text-white/90 hover:bg-white/5">My Drawings</p>
                 </Link>
+              </li>
+
+              <li>
+                <div className="border-t border-white/10 my-2" />
+              </li>
+
+              {/* Login/Admin Mobile */}
+              <li>
+                {user ? (
+                  <div className="flex flex-col gap-2 px-3">
+                    {user.role === 'admin' && (
+                      <Link href="/admin" onClick={() => setMobileOpen(false)}>
+                        <p className="py-2 px-4 bg-pink-500/80 text-white text-center rounded-lg">Admin Dashboard</p>
+                      </Link>
+                    )}
+                    <button
+                      onClick={() => { handleLogout(); setMobileOpen(false); }}
+                      className="py-2 px-4 bg-black/30 text-white rounded-lg"
+                    >
+                      Logout
+                    </button>
+                  </div>
+                ) : (
+                  <Link href="/login" onClick={() => setMobileOpen(false)}>
+                    <p className="px-3 py-2 rounded-md text-white/90 hover:bg-white/5 text-center bg-white/10">Login</p>
+                  </Link>
+                )}
               </li>
             </ul>
           </div>
