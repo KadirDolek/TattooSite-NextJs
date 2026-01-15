@@ -339,11 +339,17 @@ export default function AdminDashboard() {
             {currentItems.map((item) => (
               <div key={item._id || item.id} className="bg-black/30 rounded-lg overflow-hidden border border-pink-400/20 hover:border-pink-400/50 transition">
                 <div className="aspect-square relative">
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    className="w-full h-full object-cover"
-                  />
+                  {item.src ? (
+                    <img
+                      src={item.src}
+                      alt={item.alt || 'Image'}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gray-700 flex items-center justify-center text-gray-400">
+                      Pas d'image
+                    </div>
+                  )}
                 </div>
                 <div className="p-4">
                   <p className="text-sm text-pink-200 mb-3 truncate">{item.alt || 'Sans description'}</p>
