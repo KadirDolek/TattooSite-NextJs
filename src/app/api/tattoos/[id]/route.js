@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getTattoos, saveTattoos } from '../../../../lib/db.js';
+import { updateTattoo, deleteTattoo } from '../../../../lib/mongodb.js';
 import { requireAdmin } from '../../../../lib/middleware.js';
 
 // PUT update tattoo (admin only)
@@ -13,26 +13,20 @@ export async function PUT(request, { params }) {
     const { id } = await params;
     const { src, alt } = await request.json();
 
-    const tattoos = getTattoos();
-    const index = tattoos.findIndex(t => t.id === id);
+    const updateData = { updatedAt: new Date() };
+    if (src) updateData.src = src;
+    if (alt !== undefined) updateData.alt = alt;
 
-    if (index === -1) {
+    const result = await updateTattoo(id, updateData);
+
+    if (result.matchedCount === 0) {
       return NextResponse.json(
         { error: 'Tattoo non trouvé' },
         { status: 404 }
       );
     }
 
-    tattoos[index] = {
-      ...tattoos[index],
-      src: src || tattoos[index].src,
-      alt: alt !== undefined ? alt : tattoos[index].alt,
-      updatedAt: new Date().toISOString()
-    };
-
-    saveTattoos(tattoos);
-
-    return NextResponse.json({ tattoo: tattoos[index] });
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Error updating tattoo:', error);
     return NextResponse.json(
@@ -51,17 +45,14 @@ export async function DELETE(request, { params }) {
 
   try {
     const { id } = await params;
-    const tattoos = getTattoos();
-    const filteredTattoos = tattoos.filter(t => t.id !== id);
+    const result = await deleteTattoo(id);
 
-    if (filteredTattoos.length === tattoos.length) {
+    if (result.deletedCount === 0) {
       return NextResponse.json(
         { error: 'Tattoo non trouvé' },
         { status: 404 }
       );
     }
-
-    saveTattoos(filteredTattoos);
 
     return NextResponse.json({ success: true });
   } catch (error) {

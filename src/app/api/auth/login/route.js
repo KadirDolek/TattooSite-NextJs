@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getUsers } from '../../../../lib/db.js';
+import { getUserByEmail } from '../../../../lib/mongodb.js';
 import { verifyPassword, createToken } from '../../../../lib/auth.js';
 
 export async function POST(request) {
@@ -13,8 +13,7 @@ export async function POST(request) {
       );
     }
 
-    const users = getUsers();
-    const user = users.find(u => u.email === email);
+    const user = await getUserByEmail(email);
 
     if (!user) {
       return NextResponse.json(
@@ -33,7 +32,7 @@ export async function POST(request) {
     }
 
     const token = await createToken({
-      userId: user.id,
+      userId: user._id.toString(),
       email: user.email,
       role: user.role
     });
@@ -41,7 +40,7 @@ export async function POST(request) {
     const response = NextResponse.json({
       success: true,
       user: {
-        id: user.id,
+        id: user._id.toString(),
         email: user.email,
         role: user.role
       }

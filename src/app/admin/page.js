@@ -117,7 +117,7 @@ export default function AdminDashboard() {
         imagePath = await uploadFile();
       }
 
-      const response = await fetch(getEndpoint(editingItem.id), {
+      const response = await fetch(getEndpoint(editingItem._id || editingItem.id), {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ src: imagePath, alt: formData.alt })
@@ -337,7 +337,7 @@ export default function AdminDashboard() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {currentItems.map((item) => (
-              <div key={item.id} className="bg-black/30 rounded-lg overflow-hidden border border-pink-400/20 hover:border-pink-400/50 transition">
+              <div key={item._id || item.id} className="bg-black/30 rounded-lg overflow-hidden border border-pink-400/20 hover:border-pink-400/50 transition">
                 <div className="aspect-square relative">
                   <img
                     src={item.src}
@@ -355,7 +355,7 @@ export default function AdminDashboard() {
                       Modifier
                     </button>
                     <button
-                      onClick={() => handleDelete(item.id)}
+                      onClick={() => handleDelete(item._id || item.id)}
                       className="flex-1 px-3 py-2 bg-red-500 hover:bg-red-600 text-white text-sm rounded transition"
                     >
                       Supprimer

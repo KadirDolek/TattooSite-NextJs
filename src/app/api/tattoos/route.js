@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server';
-import { getTattoos, saveTattoos } from '../../../lib/db.js';
+import { getTattoos, createTattoo } from '../../../lib/mongodb.js';
 import { requireAdmin } from '../../../lib/middleware.js';
 
 // GET all tattoos (public)
 export async function GET() {
   try {
-    const tattoos = getTattoos();
+    const tattoos = await getTattoos();
     return NextResponse.json({ tattoos });
   } catch (error) {
     console.error('Error fetching tattoos:', error);
@@ -33,16 +33,14 @@ export async function POST(request) {
       );
     }
 
-    const tattoos = getTattoos();
     const newTattoo = {
-      id: String(Date.now()),
       src,
       alt: alt || '',
-      createdAt: new Date().toISOString()
+      createdAt: new Date()
     };
 
-    tattoos.push(newTattoo);
-    saveTattoos(tattoos);
+    const result = await createTattoo(newTattoo);
+    newTattoo._id = result.insertedId;
 
     return NextResponse.json({ tattoo: newTattoo }, { status: 201 });
   } catch (error) {

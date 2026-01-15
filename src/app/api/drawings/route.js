@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server';
-import { getDrawings, saveDrawings } from '../../../lib/db.js';
+import { getDrawings, createDrawing } from '../../../lib/mongodb.js';
 import { requireAdmin } from '../../../lib/middleware.js';
 
 // GET all drawings (public)
 export async function GET() {
   try {
-    const drawings = getDrawings();
+    const drawings = await getDrawings();
     return NextResponse.json({ drawings });
   } catch (error) {
     console.error('Error fetching drawings:', error);
@@ -33,16 +33,14 @@ export async function POST(request) {
       );
     }
 
-    const drawings = getDrawings();
     const newDrawing = {
-      id: String(Date.now()),
       src,
       alt: alt || '',
-      createdAt: new Date().toISOString()
+      createdAt: new Date()
     };
 
-    drawings.push(newDrawing);
-    saveDrawings(drawings);
+    const result = await createDrawing(newDrawing);
+    newDrawing._id = result.insertedId;
 
     return NextResponse.json({ drawing: newDrawing }, { status: 201 });
   } catch (error) {

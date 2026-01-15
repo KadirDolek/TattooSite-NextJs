@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(python:*)",
+      "Bash(taskkill:*)",
+      "Bash(pkill:*)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\kadir\\OneDrive\\Bureau\\Coding\\NextJs\\baabyalish\\.next\\dev"
+    ]
+  }
+}

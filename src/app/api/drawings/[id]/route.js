@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getDrawings, saveDrawings } from '../../../../lib/db.js';
+import { updateDrawing, deleteDrawing } from '../../../../lib/mongodb.js';
 import { requireAdmin } from '../../../../lib/middleware.js';
 
 // PUT update drawing (admin only)
@@ -13,26 +13,20 @@ export async function PUT(request, { params }) {
     const { id } = await params;
     const { src, alt } = await request.json();
 
-    const drawings = getDrawings();
-    const index = drawings.findIndex(d => d.id === id);
+    const updateData = { updatedAt: new Date() };
+    if (src) updateData.src = src;
+    if (alt !== undefined) updateData.alt = alt;
 
-    if (index === -1) {
+    const result = await updateDrawing(id, updateData);
+
+    if (result.matchedCount === 0) {
       return NextResponse.json(
         { error: 'Drawing non trouvé' },
         { status: 404 }
       );
     }
 
-    drawings[index] = {
-      ...drawings[index],
-      src: src || drawings[index].src,
-      alt: alt !== undefined ? alt : drawings[index].alt,
-      updatedAt: new Date().toISOString()
-    };
-
-    saveDrawings(drawings);
-
-    return NextResponse.json({ drawing: drawings[index] });
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Error updating drawing:', error);
     return NextResponse.json(
@@ -51,17 +45,14 @@ export async function DELETE(request, { params }) {
 
   try {
     const { id } = await params;
-    const drawings = getDrawings();
-    const filteredDrawings = drawings.filter(d => d.id !== id);
+    const result = await deleteDrawing(id);
 
-    if (filteredDrawings.length === drawings.length) {
+    if (result.deletedCount === 0) {
       return NextResponse.json(
         { error: 'Drawing non trouvé' },
         { status: 404 }
       );
     }
-
-    saveDrawings(filteredDrawings);
 
     return NextResponse.json({ success: true });
   } catch (error) {

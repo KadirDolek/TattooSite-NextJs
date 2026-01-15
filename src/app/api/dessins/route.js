@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server';
-import { getDessins, saveDessins } from '../../../lib/db.js';
+import { getDessins, createDessin } from '../../../lib/mongodb.js';
 import { requireAdmin } from '../../../lib/middleware.js';
 
 // GET all dessins (public)
 export async function GET() {
   try {
-    const dessins = getDessins();
+    const dessins = await getDessins();
     return NextResponse.json({ dessins });
   } catch (error) {
     console.error('Error fetching dessins:', error);
@@ -33,16 +33,14 @@ export async function POST(request) {
       );
     }
 
-    const dessins = getDessins();
     const newDessin = {
-      id: String(Date.now()),
       src,
       alt: alt || '',
-      createdAt: new Date().toISOString()
+      createdAt: new Date()
     };
 
-    dessins.push(newDessin);
-    saveDessins(dessins);
+    const result = await createDessin(newDessin);
+    newDessin._id = result.insertedId;
 
     return NextResponse.json({ dessin: newDessin }, { status: 201 });
   } catch (error) {

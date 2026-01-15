@@ -1,7 +1,5 @@
 import { NextResponse } from 'next/server';
-import { writeFile, mkdir } from 'fs/promises';
-import { existsSync } from 'fs';
-import path from 'path';
+import { uploadImage } from '../../../lib/cloudinary.js';
 import { requireAdmin } from '../../../lib/middleware.js';
 
 export async function POST(request) {
@@ -13,7 +11,7 @@ export async function POST(request) {
   try {
     const formData = await request.formData();
     const file = formData.get('file');
-    const category = formData.get('category') || 'uploads';
+    const category = formData.get('category') || 'general';
 
     if (!file) {
       return NextResponse.json(
@@ -22,31 +20,12 @@ export async function POST(request) {
       );
     }
 
-    const bytes = await file.arrayBuffer();
-    const buffer = Buffer.from(bytes);
-
-    // Create uploads directory if it doesn't exist
-    const uploadsDir = path.join(process.cwd(), 'public', 'uploads', category);
-    if (!existsSync(uploadsDir)) {
-      await mkdir(uploadsDir, { recursive: true });
-    }
-
-    // Generate unique filename
-    const timestamp = Date.now();
-    const originalName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_');
-    const filename = `${timestamp}-${originalName}`;
-    const filepath = path.join(uploadsDir, filename);
-
-    // Write file
-    await writeFile(filepath, buffer);
-
-    // Return the public URL path
-    const publicPath = `/uploads/${category}/${filename}`;
+    const result = await uploadImage(file, `baabyalish/${category}`);
 
     return NextResponse.json({
       success: true,
-      path: publicPath,
-      filename: filename
+      path: result.secure_url,
+      publicId: result.public_id
     });
   } catch (error) {
     console.error('Error uploading file:', error);
